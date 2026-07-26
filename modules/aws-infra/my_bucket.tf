@@ -12,7 +12,7 @@ resource "aws_s3_bucket_versioning" "bucket-1-versioning" {
   }
 }
 
-resource "aws_s3_server_side_encryption_configuration" "bucket-1-encryption" {
+resource "aws_s3_bucket_server_side_encryption_configuration" "bucket-1-encryption" {
   bucket = aws_s3_bucket.bucket-1.id
   rule {
     apply_server_side_encryption_by_default {
